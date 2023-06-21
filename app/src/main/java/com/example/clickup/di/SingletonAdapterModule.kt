@@ -1,7 +1,7 @@
 package com.example.clickup.di
 
-import com.example.todolist.presentation.adapter.CategoryAdapter
-import com.example.todolist.presentation.adapter.TasksAdapter
+import com.example.clickup.adapter.CategoryAdapter
+import com.example.clickup.adapter.TasksAdapter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

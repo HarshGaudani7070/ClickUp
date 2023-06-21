@@ -1,8 +1,8 @@
 package com.example.clickup.di
 import android.app.Application
 import androidx.room.Room
-import com.example.todolist.data.db.TaskCategoryDao
-import com.example.todolist.data.db.TaskDatabase
+import com.example.clickup.db.TaskCategoryDao
+import com.example.clickup.db.TaskDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

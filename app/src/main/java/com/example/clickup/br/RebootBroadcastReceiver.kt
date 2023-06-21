@@ -6,9 +6,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat.getSystemService
-import com.example.todolist.data.model.TaskInfo
-import com.example.todolist.data.repository.TaskCategoryRepositoryImpl
-import com.example.todolist.presentation.MainActivity
+import com.example.clickup.model.TaskInfo
+import com.example.clickup.repository.TaskCategoryRepositoryImpl
+import com.example.clickup.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Main

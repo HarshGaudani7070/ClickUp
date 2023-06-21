@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.databinding.DataBindingUtil
-import com.example.todolist.R
-import com.example.todolist.databinding.FragmentSettingsBinding
+import com.example.clickup.R
+import com.example.clickup.databinding.FragmentSettingsBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.review.ReviewManagerFactory
 import dagger.hilt.android.AndroidEntryPoint

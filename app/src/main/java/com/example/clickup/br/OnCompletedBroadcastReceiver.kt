@@ -4,8 +4,8 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationManagerCompat
-import com.example.todolist.data.repository.TaskCategoryRepositoryImpl
-import com.example.todolist.data.model.TaskInfo
+import com.example.clickup.repository.TaskCategoryRepositoryImpl
+import com.example.clickup.model.TaskInfo
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO

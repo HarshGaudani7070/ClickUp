@@ -6,11 +6,11 @@ import android.content.Context
 import android.content.Intent
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.example.todolist.presentation.MainActivityViewModel
-import com.example.todolist.presentation.br.AlarmReceiver
-import com.example.todolist.data.model.CategoryInfo
-import com.example.todolist.data.model.TaskInfo
-import com.example.todolist.presentation.MainActivity
+import com.example.clickup.MainActivityViewModel
+import com.example.clickup.br.AlarmReceiver
+import com.example.clickup.model.CategoryInfo
+import com.example.clickup.model.TaskInfo
+import com.example.clickup.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

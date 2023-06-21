@@ -1,8 +1,8 @@
 package com.example.clickup.di
 
-import com.example.todolist.data.db.TaskCategoryDao
-import com.example.todolist.domain.TaskCategoryRepository
-import com.example.todolist.data.repository.TaskCategoryRepositoryImpl
+import com.example.clickup.db.TaskCategoryDao
+import com.example.clickup.domain.TaskCategoryRepository
+import com.example.clickup.repository.TaskCategoryRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

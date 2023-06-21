@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ToDoList" parent="Theme.Material3.DayNight">
+    <style name="Theme.ClickUP" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/light_blue</item>
         <item name="colorPrimaryVariant">@color/dark_blue</item>
@@ -18,20 +18,20 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.ToDoList.NoActionBar">
+    <style name="Theme.ClickUP.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.ToDoList.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ClickUP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@android:color/black</item>
     </style>
 
-    <style name="Theme.ToDoList.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.ClickUp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Theme.ToDoList." parent="Theme.MaterialComponents">
+    <style name="Theme.ClickUp." parent="Theme.MaterialComponents">
         <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
     </style>
 

@@ -4,11 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.todolist.data.model.CategoryInfo
-import com.example.todolist.data.model.NoOfTaskForEachCategory
-import com.example.todolist.data.model.TaskCategoryInfo
-import com.example.todolist.data.model.TaskInfo
-import com.example.todolist.domain.TaskCategoryRepository
+import com.example.clickup.model.CategoryInfo
+import com.example.clickup.model.NoOfTaskForEachCategory
+import com.example.clickup.model.TaskCategoryInfo
+import com.example.clickup.model.TaskInfo
+import com.example.clickup.domain.TaskCategoryRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
