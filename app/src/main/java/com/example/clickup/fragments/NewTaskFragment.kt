@@ -223,6 +223,7 @@ class NewTaskFragment : Fragment() {
         isCategorySelected = true
     }
 
+
     private fun addTask() {
         val date = Date()
         Log.d("DATA", taskInfo.date.seconds.toString())
