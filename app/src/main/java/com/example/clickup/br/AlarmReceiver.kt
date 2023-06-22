@@ -1,5 +1,6 @@
 package com.example.clickup.br
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.app.PendingIntent.*
 import android.content.BroadcastReceiver
@@ -22,6 +23,7 @@ class AlarmReceiver : BroadcastReceiver() {
     @Inject
     lateinit var sharedPreferences: SharedPreferences
 
+    @SuppressLint("MissingPermission")
     override fun onReceive(p0: Context?, p1: Intent?) {
         val taskInfo = p1?.getSerializableExtra("task_info") as? TaskInfo
         if (sharedPreferences.getBoolean(taskInfo?.priority.toString(), true)) {
@@ -57,7 +59,7 @@ class AlarmReceiver : BroadcastReceiver() {
                     .build()
             }
             notificationManager = p0?.let { NotificationManagerCompat.from(it) }
-            notification?.let { taskInfo?.let { it1 -> notificationManager.notify(it1.id,it) } }
+            notification?.let { taskInfo?.let { it1 -> notificationManager?.notify(it1.id,it) } }
         }
     }
 }
