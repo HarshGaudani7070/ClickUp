@@ -28,6 +28,7 @@ class TaskCategoryFragment : ParentFragment() {
     private lateinit var binding: FragmentTaskCategoryBinding
     private val args: TaskCategoryFragmentArgs by navArgs()
     private lateinit var category: String
+
     @Inject
     @Named("task_category_fragment")
     lateinit var adapter: TasksAdapter
@@ -44,7 +45,8 @@ class TaskCategoryFragment : ParentFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
-        adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+        adapter.stateRestorationPolicy =
+            RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         adapter.setOnItemClickListener {
             editTaskInformation(it)
         }
@@ -57,7 +59,7 @@ class TaskCategoryFragment : ParentFragment() {
             text.text = category
         }
         viewModel.getUncompletedTaskOfCategory(category).observe(viewLifecycleOwner, Observer {
-            if(it.isEmpty()) binding.noResultAnimationView.visibility = View.VISIBLE
+            if (it.isEmpty()) binding.noResultAnimationView.visibility = View.VISIBLE
             else binding.noResultAnimationView.visibility = View.GONE
             adapter.differ.submitList(it)
         })

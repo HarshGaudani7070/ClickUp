@@ -46,7 +46,7 @@ class AlarmReceiver : BroadcastReceiver() {
                 NotificationCompat.Action.Builder(0, "Completed", pendingIntent1).build()
 
             val notification = p0?.let {
-                NotificationCompat.Builder(it, "to_do_list")
+                NotificationCompat.Builder(it, "Click_Up")
                     .setContentTitle("Task Reminder")
                     .setContentText(taskInfo?.description)
                     .setSmallIcon(R.mipmap.ic_launcher)
@@ -57,7 +57,7 @@ class AlarmReceiver : BroadcastReceiver() {
                     .build()
             }
             notificationManager = p0?.let { NotificationManagerCompat.from(it) }
-            notification?.let { taskInfo?.let { it1 -> notificationManager?.notify(it1.id, it) } }
+            notification?.let { taskInfo?.let { it1 -> notificationManager.notify(it1.id,it) } }
         }
     }
 }

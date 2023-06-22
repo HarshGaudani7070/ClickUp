@@ -28,11 +28,13 @@ import javax.inject.Named
 class BaseFragment : ParentFragment() {
 
     private lateinit var viewModel: MainActivityViewModel
-    private lateinit var binding : FragmentBaseBinding
+    private lateinit var binding: FragmentBaseBinding
+
     @Inject
     @Named("base_fragment")
-    lateinit var adapter : TasksAdapter
-    @Inject lateinit var adapter2 : CategoryAdapter
+    lateinit var adapter: TasksAdapter
+    @Inject
+    lateinit var adapter2: CategoryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,13 +65,13 @@ class BaseFragment : ParentFragment() {
         }
 
         viewModel.getUncompletedTask().observe(viewLifecycleOwner, Observer {
-            if(it.isEmpty()) binding.noResultAnimationView.visibility = View.VISIBLE
+            if (it.isEmpty()) binding.noResultAnimationView.visibility = View.VISIBLE
             else binding.noResultAnimationView.visibility = View.GONE
             adapter.differ.submitList(it)
         })
 
         viewModel.getNoOfTaskForEachCategory().observe(viewLifecycleOwner, Observer {
-            if(it.isEmpty()) binding.categoryAnimationView.visibility = View.VISIBLE
+            if (it.isEmpty()) binding.categoryAnimationView.visibility = View.VISIBLE
             else binding.categoryAnimationView.visibility = View.GONE
             adapter2.differ.submitList(it)
         })
@@ -91,9 +93,9 @@ class BaseFragment : ParentFragment() {
                 val position = viewHolder.adapterPosition
                 val taskInfo = adapter.differ.currentList[position]?.taskInfo
                 val categoryInfo = adapter.differ.currentList[position]?.categoryInfo?.get(0)
-                if (taskInfo != null && categoryInfo!= null) {
+                if (taskInfo != null && categoryInfo != null) {
                     deleteTask(viewModel, taskInfo, categoryInfo)
-                    Snackbar.make(binding.root,"Deleted Successfully",Snackbar.LENGTH_LONG)
+                    Snackbar.make(binding.root, "Deleted Successfully", Snackbar.LENGTH_LONG)
                         .apply {
                             setAction("Undo") {
                                 viewModel.insertTaskAndCategory(taskInfo, categoryInfo)
@@ -126,5 +128,7 @@ class BaseFragment : ParentFragment() {
 
     private fun initRecyclerView1() {
         binding.categoriesRecyclerView.adapter = adapter2
-        binding.categoriesRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.categoriesRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
     }
+}
