@@ -45,7 +45,7 @@ class SettingsFragment : Fragment() {
             request.addOnCompleteListener {
                 if(it.isSuccessful){
                     val reviewInfo = it.result
-                    val flow = manager.launchReviewFlow(activity!!, reviewInfo!!)
+                    val flow = manager.launchReviewFlow(requireActivity(), reviewInfo!!)
                     flow.addOnCompleteListener {  }
                 }else {
                     Snackbar.make(binding.root, "Some error occurred!", Snackbar.LENGTH_SHORT).setAction("Action", null).show()
