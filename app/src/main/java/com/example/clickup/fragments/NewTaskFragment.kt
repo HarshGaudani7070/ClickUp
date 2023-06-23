@@ -55,7 +55,6 @@ class NewTaskFragment : Fragment() {
     private var isCategorySelected = false
     private lateinit var colorView : View
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
