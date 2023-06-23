@@ -302,7 +302,6 @@ class NewTaskFragment : Fragment() {
             binding.dateAndTimePicker.text = DateToString.convertDateToString(taskInfo.date)
         }
         datePicker.show(childFragmentManager,"TAG")
-
     }
 
     private fun setAlarm(taskInfo: TaskInfo) {
