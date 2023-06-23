@@ -36,4 +36,8 @@
     <string name="high_priority_tasks">High priority tasks</string>
     <string name="general">General</string>
     <string name="rate_the_app">Rate the app</string>
+    <string name="app_enter_email">Enter your email</string>
+    <string name="app_enter_password">Enter your password</string>
+    <string name="app_enter_name">Enter Name</string>
+    <string name="app_enter_age">Enter age</string>
 </resources>
