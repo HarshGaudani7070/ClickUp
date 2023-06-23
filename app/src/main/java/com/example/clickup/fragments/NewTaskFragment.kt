@@ -5,11 +5,13 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -61,6 +63,7 @@ class NewTaskFragment : Fragment() {
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
@@ -313,6 +316,7 @@ class NewTaskFragment : Fragment() {
         alarmManager.setAlarmClock(clockInfo, pendingIntent)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotification() {
         val importance = NotificationManager.IMPORTANCE_HIGH
         val channel = NotificationChannel("to_do_list", "Tasks Notification Channel", importance).apply {
