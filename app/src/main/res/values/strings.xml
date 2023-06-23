@@ -40,4 +40,5 @@
     <string name="app_enter_password">Enter your password</string>
     <string name="app_enter_name">Enter Name</string>
     <string name="app_enter_age">Enter age</string>
+    <string name="Contact_no">Contact No.</string>
 </resources>
