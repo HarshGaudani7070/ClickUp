@@ -33,6 +33,7 @@ class BaseFragment : ParentFragment() {
     @Inject
     @Named("base_fragment")
     lateinit var adapter: TasksAdapter
+
     @Inject
     lateinit var adapter2: CategoryAdapter
 
