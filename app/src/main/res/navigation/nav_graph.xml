@@ -10,6 +10,7 @@
         android:name="com.example.clickup.fragments.SettingsFragment"
         android:label=""
         tools:layout="@layout/fragment_settings" />
+
     <fragment
         android:id="@+id/completed_tasks_fragment"
         android:name="com.example.clickup.fragments.CompletedTasksFragment"

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Registration here..."
+        android:text="Registration"
         android:textColor="@color/purple_200"
         android:textSize="33sp"
         android:textStyle="bold"
@@ -68,6 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/contact_no" />
 
     <Button
+        android:id="@+id/registerPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
